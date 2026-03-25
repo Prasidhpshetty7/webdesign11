@@ -14,44 +14,44 @@ export default function Projects() {
   
   const projects = useMemo(() => [
     {
-      title: "Veto",
-      description: "A decentralized governance application enabling secure and transparent voting mechanisms on the Lisk blockchain.",
+      title: "3D Room Portfolio",
+      description: "Immersive 3D portfolio leveraging Three.js for WebGL rendering, advanced shader programming, and real-time lighting. Features interactive object detection and smooth GSAP animations.",
       header: (
         <div className="w-full h-60 rounded-xl overflow-hidden relative">
           <Image
-            src="/images/veto.png"
-            alt="Veto - Governance App"
+            src="/images/3droom.png"
+            alt="3D Room Portfolio"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover transition-all duration-500 grayscale opacity-90 group-hover/bento:opacity-100 dark:opacity-100 dark:brightness-75 group-hover/bento:grayscale-0 group-hover/bento:brightness-100"
           />
         </div>
       ),
-      repo: "https://github.com/varshithm7x/Veto",
-      link: "https://veto-lisk.vercel.app/",
-      tech: "Next.js, Lisk"
+      repo: "https://github.com/Prasidhpshetty7/3DROOM",
+      link: "https://3d.prasidhshetty.in/",
+      tech: "Three.js, WebGL, GSAP, GLSL"
     },
     {
-      title: "Espadas AI",
-      description: "Intelligent interview preparation platform. features real-time voice interviews, AI feedback, and dynamic question generation.",
+      title: "macOS Web Clone",
+      description: "Realistic desktop environment built with React 18 and TypeScript. Features physics-based dock animations, window management with drag-and-drop, and authentic macOS blur effects.",
       header: (
         <div className="w-full h-60 rounded-xl overflow-hidden relative">
           <Image
-            src="/images/espadas.png"
-            alt="Espadas AI Platform"
+            src="/images/macos.png"
+            alt="macOS Web Clone"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover transition-all duration-500 grayscale opacity-90 group-hover/bento:opacity-100 dark:opacity-100 dark:brightness-75 group-hover/bento:grayscale-0 group-hover/bento:brightness-100"
           />
         </div>
       ),
-      repo: "https://github.com/varshithm7x/Espadas-AI",
-      link: "https://espadas-ai.vercel.app",
-      tech: "Next.js, Vapi AI, Firebase"
+      repo: "https://github.com/Prasidhpshetty7/macos",
+      link: "https://os.prasidhshetty.in/",
+      tech: "React, TypeScript, Zustand, Framer Motion"
     },
     {
-      title: "MathBox",
-      description: "Interactive mathematics learning platform with courses, progress tracking, and visual demonstrations.",
+      title: "Coming Soon",
+      description: "Exciting new project in development. Stay tuned for updates!",
       header: (
         <div className="w-full h-60 rounded-xl overflow-hidden relative flex items-center justify-center">
             <TextPressure
@@ -69,11 +69,11 @@ export default function Projects() {
       ),
       repo: null,
       link: null,
-      tech: "React, JS, CSS"
+      tech: null
     },
     {
-      title: "CadGPT",
-      description: "AI-powered CAD design assistant that converts natural language descriptions into CAD models. Bridging the gap between language and 3D design.",
+      title: "Coming Soon",
+      description: "Another exciting project currently under development. Check back soon!",
       header: (
         <div className="w-full h-60 rounded-xl overflow-hidden relative flex items-center justify-center">
             <TextPressure
@@ -89,9 +89,9 @@ export default function Projects() {
             />
         </div>
       ),
-      repo: "https://github.com/varshithm7x/CadGPT",
+      repo: null,
       link: null,
-      tech: "Python, AI/ML"
+      tech: null
     },
   ], [theme]);
 
@@ -128,6 +128,9 @@ export default function Projects() {
               description={
                 <div className="flex flex-col gap-2">
                   <span className="text-sm text-neutral-700 dark:text-neutral-400">{item.description}</span>
+                  {item.tech && (
+                    <span className="text-xs text-blue-600 dark:text-blue-400 font-mono">{item.tech}</span>
+                  )}
                 </div>
               }
               header={item.header}
